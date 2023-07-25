@@ -1,9 +1,11 @@
-
+#include <stdlib.h>//malloc,free,exit関数を使用する際に必要
 #include <stdio.h>
+#include <math.h>//sqrt関数を使用する際に必要
 
-int myRoot(double x) // x の平方根を返す関数。x >= 0 ではないとき exit(1) とする。 
+//double型に変更
+double myRoot(double x) // x の平方根を返す関数。x >= 0 ではないとき exit(1) とする。 
 {
-  int y;
+  double y;//double型に変更
   if( x <= 0 ){
     exit(1);
   }
@@ -14,6 +16,7 @@ int myRoot(double x) // x の平方根を返す関数。x >= 0 ではないと�
 int main(void)
 {
   int i;
+  i=0;//iの初期値を定義
   double *x = (double *)malloc(sizeof(double) * 100);
 
   while( i <= 100 ){
